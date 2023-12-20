@@ -28,7 +28,8 @@ Image classification is a set of steps and a workflow that relies on a previous 
 
 → Test Set: which is the remaining portion, usually 10% to 20% of the total dataset to evaluate the model's performance on unseen data and assess how well the model generalizes to new, previously unseen examples.
 
-![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled.png)
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/9f6d4a16-21d3-4dcb-8c25-5587014c7d76)
+
 
  Then, using techniques like CNNs we can extract relevant features from the input data to train the model. During the training, the algorithm adjusts its parameters based on the input data given to it and learns how to differentiate between different classes. The model's performance is then evaluated on a new set of images to test and verify its accuracy and get insights into its ability to correctly classify objects. Then fine-tuning is often a necessary step to enhance the model’s performance by adjusting hyperparameters, experimenting with different architectures, or incorporating regularization techniques to prevent overfitting. Finally, the model can be deployed to classify new images.
 
@@ -36,7 +37,7 @@ Image classification is a set of steps and a workflow that relies on a previous 
 
 Neural networks, a subset of machine learning and central to deep learning, consist of node layers, including an input layer, hidden layers, and an output layer. Nodes connect with associated weights and thresholds. If a node's output exceeds the threshold, it activates and transmits data to the next layer; otherwise, no data passes through. There are various types of neural nets, which are used for different use cases and data types. Recurrent neural networks excel in natural language processing and speech recognition, while CNNs are prevalent in classification and computer vision. Unlike traditional methods, CNNs streamline image classification and object recognition by leveraging matrix multiplication principles. Despite their computational demands, often necessitating GPUs for training (even in our case, which made the training relatively faster), CNNs offer a scalable approach to visual tasks. CNNs processes input images by assigning importance, represented by learnable weights and biases, to different aspects or objects within the image, allowing for effective differentiation. Unlike many classification algorithms, CNNs require less pre-processing, as they can learn filters and characteristics through training, eliminating the need for hand-engineered filters. The architecture of CNNs mirrors the connectivity pattern of neurons in the human brain and draws inspiration from the organization of the Visual Cortex. This neural network design is such that individual neurons respond to stimuli within specific regions known as Receptive Fields. The combination of these fields creates overlapping coverage across the entire visual area, enhancing the network's ability to analyze and understand complex visual information.
 
-![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%201.png)
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/f616e945-4d64-4f75-b257-46a7bcf2c2b6)
 
 ## Kaggle
 
@@ -54,7 +55,8 @@ In this project we will focus on CIFAR-10 dataset.
 
  
 
-![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%202.png)
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/a51ced18-dc9f-46d8-a065-ccedf1d5670a)
+
 
 The CIFAR-10 dataset comprises 60,000 32x32 color images distributed across 10 classes, each containing 6,000 images. The dataset is divided into 50,000 training images and 10,000 test images, maintaining the original train/test split. The provided files include:
 
@@ -80,8 +82,8 @@ The label classes in the dataset are as follows:
 Each class is mutually exclusive, with no overlap between automobile and truck categories. Specifically, "Automobile" encompasses sedans and SUVs, while "Truck" includes only large trucks, excluding pickup trucks. The objective is to predict labels for all 300,000 images in the dataset.
 
 ## Tenserflow
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/baea1aa4-1071-4822-aba1-34a6fb2da44b)
 
-![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%203.png)
 
 TensorFlow is an open-source machine learning framework developed by Google, renowned for its versatility in building and training diverse types of machine learning models, particularly neural networks. It operates on a foundational concept of constructing computational graphs, where nodes represent mathematical operations and edges depict the flow of data through these operations. TensorFlow empowers users with both high-level APIs, like Keras, for simplified model creation, and lower-level APIs for fine-grained control over model architectures and training processes. Its flexibility, efficiency in handling large-scale computations across multiple devices, extensive documentation, and vibrant community support make it a leading choice for developing and deploying machine learning models across various domains.
 
@@ -89,7 +91,8 @@ TensorFlow is an open-source machine learning framework developed by Google, ren
 
 Keras is an open-source high-level neural networks API written in Python. It acts as an interface for building, training, and deploying deep learning models. Keras is designed to be user-friendly, modular, and extensible, allowing both beginners and experienced researchers to work with complex neural network architectures effortlessly. Some of its best features are:
 
-![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%204.png)
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/5915decb-3e6c-4892-b266-beee396c343d)
+
 
 - Simple and intuitive interface.
 - Compatibility with various backends, including TensorFlow and Microsoft Cognitive Toolkit (CNTK).
@@ -186,7 +189,8 @@ plt.show()
 - The code above defines a function **`get_10_random_images()`** that aims to retrieve ten random images from the dataset, each belonging to a different class. The **`data_dict`** maps the class indices to their respective labels. The function initiates an empty dictionary **`d`**, then iterates to randomly select indices from the training dataset (**`x_train`** and **`y_train`**). For each randomly chosen index, if its associated label hasn't been encountered before, it adds the index to the dictionary, associating it with its corresponding label. Once it collects ten unique indices for each class, it displays a grid of ten images (two rows and five columns) using Matplotlib. Each image is plotted alongside its associated class label from the **`data_dict`**. The resulting visual representation presents a selection of ten random images, one from each class, providing a snapshot of the diversity within the dataset.
 - Here is the result
 
-![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%205.png)
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/ade87bbb-3911-4373-b84b-ef816728b285)
+
 
 ## Models
 
@@ -244,7 +248,7 @@ model.summary()
     
         We got the following results:
     
-    ![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%206.png)
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/5fec2046-a62e-4809-9544-9602d646a795)
     
     - However, by looking at each step of the epoch, in the training history provided, a noticeable pattern of overfitting emerges around epoch 15. While the training loss continues to decrease, and training accuracy improves, the validation loss starts to rise, and the validation accuracy either plateaus or slightly decreases. This divergence indicates that the model is becoming too specific to the training data and is failing to generalize well to unseen data, a classic symptom of overfitting.
     - Therefore we decided to improve this architecture and use dropout or L2 regularization to prevent the model from relying too heavily on specific features in the training set.
@@ -289,7 +293,8 @@ model.summary()
 - **Results**
     - We used the same code in the previous model to compile and fit the model but we reduced the number of epochs to 15 and we got the following results:
     
-    ![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%207.png)
+    ![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/041b6677-4b4d-4a94-bd51-ba23a86cd8db)
+
     
     - As we can see the model shows decent performance on the training set, but the gap between training and validation accuracy suggests overfitting. The model might be too complex or not getting enough diverse examples to generalize well.
     - Therefore we decided to refine our model more and look for a more suitable approach especially the architecture we are using.
@@ -367,9 +372,11 @@ model.add(Dense(units = 10, activation = 'softmax'))
     - A **`Dense`** layer with 10 units is added to output the final predictions. This layer is the output layer and uses the 'softmax' activation function to output probabilities for the 10 classes.
 - **Summary:**
     
-    ![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%208.png)
+   ![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/7412f8e2-d56f-48bb-ba63-efd49bc09dee)
+
     
-    ![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%209.png)
+   ![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/9f321457-b52d-423a-9f6c-c50e11f1cc3d)
+
     
     - **Total Parameters:**
         - The total number of parameters used in the provided model is 309,290.
@@ -434,7 +441,7 @@ plt.show()
 
 - The code snippet above is used for plotting the accuracy and loss of a machine learning model during training and validation across epochs. The plotted graphs are a common way to visualize the model's learning progression over time.
 
-![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%2010.png)
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/94200595-921b-40b6-96d3-1f19b59e0b6a)
 
 - **Learning Rate Adjustments**: The model's learning rate was initially set to 0.001 and was reduced by a factor of 0.2 whenever the validation loss stopped improving for 2 epochs (as seen by the 'ReduceLROnPlateau' callback activations). This helped the model to fine-tune its weights and potentially avoid overshooting the minima in the loss landscape.
 - **Early Stopping**: The training was stopped early at epoch 32 instead of running all 50 epochs because the validation loss did not improve for 5 consecutive epochs. This is a mechanism to prevent overfitting and to save computational resources. The 'EarlyStopping' callback restores the weights from the epoch with the best validation loss, which was epoch 27 in your case.
@@ -530,7 +537,8 @@ plt.show()
 
 ### Graph:
 
-![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%2011.png)
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/5782e882-4a28-4197-8050-b3ed66bc3ce5)
+
 
 - **Red Line (Batch size: 32, Epochs: 20, Learning rate: 0.01, Optimizer: 'rmsprop')**:
     - This combination exhibits the highest validation accuracy after 20 epochs. It appears to be the best performing set of hyperparameters among those presented.
@@ -571,7 +579,8 @@ model.save("/content/drive/My Drive/Model.h5")
 
 - We got the following accuracy:
 
-![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%2012.png)
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/9b3bd31b-70cf-4f36-9fd2-e533e97b3b77)
+
 
 - The accuracy and loss for both training and cross-validation are relatively close, which is a good sign. It implies there's no significant overfitting.
 - The spikes in loss, particularly in the cross-validation loss, are somewhat unusual. This could be due to:
@@ -622,7 +631,8 @@ model.save("/content/drive/My Drive/Model.h5")
 
 - and we got the following final accuracy graph:
 
-![Untitled](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%2013.png)
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/8f6e49ae-1f99-474b-9d43-d8db696b2b21)
+
 
 - The implementation of the learning rate scheduler has led to a more stable training process, as evidenced by the smoother decline in validation loss.
 - The absence of significant spikes in the later epochs of training suggests that the learning rate adjustments were well-timed and effective at maintaining a steady progression of the model's learning.
@@ -630,11 +640,13 @@ model.save("/content/drive/My Drive/Model.h5")
 
 ## Comparison between model 3 and fine tuned model:
 
-![First set of graphs (Fine tuned model)](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%2014.png)
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/30df681d-2f18-4c2d-9f5a-015e83696bf7)
+
 
 First set of graphs (Fine tuned model)
 
-![Second set of graphs (Model 3)](Project%20#4%20Report%20dc73de771e43491bb62faeed75df9af3/Untitled%2015.png)
+![image](https://github.com/elmehdiziate/CIFAR-10-/assets/109172506/fb6ff805-804c-44ed-bccc-9fdfdb1fdc9a)
+
 
 Second set of graphs (Model 3)
 
